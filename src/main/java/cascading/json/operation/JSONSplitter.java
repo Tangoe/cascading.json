@@ -27,7 +27,7 @@ public class JSONSplitter extends JSONOperation implements Function {
   }
 
   public void operate(FlowProcess flowProcess, FunctionCall functionCall){
-	Object argument = functionCall.getArguments().get( 0 );
+	Object argument = functionCall.getArguments().getObject( 0 );
 	JSON jsonObject = JSONUtils.getJSON(argument);
 	
     Tuple output = new Tuple();

@@ -76,7 +76,7 @@ public class JSONFilter extends JSONOperation implements Filter {
 
   @Override
   public boolean isRemove(FlowProcess flowProcess, FilterCall filterCall){
-    Object input = filterCall.getArguments().get(0);
+    Object input = filterCall.getArguments().getObject(0);
     JSONObject jsonObj;
     if (input instanceof String) {
       jsonObj = JSONObject.fromObject( input );

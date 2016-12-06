@@ -24,7 +24,7 @@ public class JSONFlatten extends JSONOperation implements Function {
 
 	@Override
 	public void operate(FlowProcess flowProcess, FunctionCall functionCall) {
-		JSON json = JSONUtils.getJSON(functionCall.getArguments().get(0));
+		JSON json = JSONUtils.getJSON(functionCall.getArguments().getObject(0));
 
 		if (json.isArray()) {
 			JSONArray jsonArray = (JSONArray) json;
